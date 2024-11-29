@@ -2,4 +2,4 @@
 
 This is a short one-minute movie web presentation on the first semester of ZMT subject
 
-[Pagelink here]([temp](https://neddy3z.github.io/Minute-of-fear/))
+[Pagelink here](https://neddy3z.github.io/Minute-of-fear/)
