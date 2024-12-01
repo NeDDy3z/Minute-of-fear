@@ -13,21 +13,26 @@
     <div class="container">
         <h1>Minutka strachu</h1>
         <p>Krátký hororový snímek o dvou kamarádech v lese a tajemné příšerce</p>
+
     </div>
 </header>
 <main>
     <section id="about">
         <div class="container">
             <h2>Představení projektu</h2>
-            <p>„Minutka strachu“ je krátký hororový film inspirovaný atmosférou her jako <i>Soma</i> nebo <i>Phasmopbohia</i>.</p>
-            <p>Cílem projektu bylo vyzkoušet si převážně práci s efekty. Zároveň jsme se přiučili lehké organizaci, herecké imporvizaci a režii.</p>
+            <p>„Minutka strachu“ je krátký hororový film inspirovaný atmosférou her jako <i>Soma</i> nebo <i>Phasmopbohia</i>. Cílem projektu bylo vyzkoušet si převážně práci s efekty. Zároveň jsme se přiučili lehké organizaci, herecké imporvizaci a režii.</p>
+            <p><strong>Vytvořili:</strong> Aleksandr Galaev, Erik Vaněk - <i>ČVUT SIT (ZMT) 2024/25</i></p>
         </div>
     </section>
 
     <section id="video">
         <div class="container">
             <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/tempvideoid_kdoplneni" title="Video: Minutka strachu" allowfullscreen></iframe>
+            <button id="switch-button">Změnit zdroj</button>
+            <video controls>
+                <source src="galaeale_vanekeri.mp4" type="video/mp4">
+            </video>
+            <iframe src="https://www.youtube.com/embed/XRG2lXAzRMM?si=5QSbHq6P4cijP5Ca" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -52,35 +57,44 @@
 
     <section id="tech">
         <div class="container">
-            <h2>Technické detaily - DOČASNÉ VÝYPLŇOVÉ INFORMACE</h2>
+            <h2>Technické detaily</h2>
 
             <h3>Efekty:</h3>
-            <p>Použili jsme digitální simulaci, rozostření pohybu a ručně animované modely příšery.</p>
-            <img src="effects-example.jpg" alt="Ukázka efektů mlhy" class="tech-image">
+            <p>Použili jsme převážně barevné klíčování. V rámci navodění děsivé atmosféry, jsme zvolili styl vhs kamery a tv glitch.</p>
+            <img src="images/efekty.png" alt="Ukázka efektů" class="tech-image">
 
             <h3>Práce s audio sekvencemi:</h3>
-            <p>Zvukové efekty vytvořené pomocí <strong>Audacity</strong> zahrnují deformaci hlasu, ambientní zvuky lesa a náhlé výbuchy hudby pro dramatický efekt.</p>
-            <img src="audio-editing.jpg" alt="Ukázka editace zvuku v Audacity" class="tech-image">
+            <p>Úprava zvukových efektů a stop v <strong>Audacity</strong>, hlavně pomocí obalové křivky.</p>
+            <img src="images/zvuk.png" alt="Ukázka editace zvuku v Audacity" class="tech-image">
 
             <h3>Střih:</h3>
-            <p>Celý projekt byl sestříhán ve <strong>DaVinci Resolve</strong>. Použili jsme rychlé střihy pro vytvoření dynamiky útěku.</p>
-            <img src="editing-timeline.jpg" alt="Střih na časové ose v DaVinci Resolve" class="tech-image">
+            <p>Celý projekt byl sestříhán v <strong>Kdenlive</strong>.</p>
+            <img src="images/strih.png" alt="Střih na časové ose v Kdenlive" class="tech-image">
 
-            <h3>Titulky:</h3>
-            <p>Jednoduché titulky vytvořené v Adobe Premiere s animací písma pro plynulý dojem.</p>
-            <img src="subtitles-example.jpg" alt="Ukázka animace titulků v After Effects" class="tech-image">
+            <h3>Titulky a grafika:</h3>
+            <p>Jednoduch úvodní a závěrečná obrazovka byla vytvořena v <strong>GIMP</strong>.</p>
+            <img src="images/obrazek.png" alt="Ukázka tvorby v GIMP" class="tech-image">
         </div>
     </section>
 
-
     <section id="tools">
         <div class="container">
-            <h2>Použité nástroje - DOČASNÉ VÝYPLŇOVÉ INFORMACE</h2>
+            <h2>Použité nástroje</h2>
             <ul>
-                <li><strong>DaVinci Resolve:</strong> Střih a barevná korekce</li>
+                <li><strong>Kdenlive:</strong> Střih a barevná korekce</li>
                 <li><strong>Audacity:</strong> Zvuková produkce</li>
-                <li><strong>Adobe Premiere:</strong>Animace a efekty</li>
+                <li><strong>GIMP:</strong> Tvorba intro a outro grafiky</li>
                 <li><strong>Samsung S23 Ultra: </strong> Kamera - natáčeno v UHD 60FPS</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sources">
+        <div class="container">
+            <h2>Zdroje</h2>
+            <ul>
+                <li><strong><a href="https://pixabay.com/">Pixabay.com:</a></strong> Zvukové efeky příšerky</li>
+                <li><strong><a href="https://vecteezy.com/">Vecteezy.com:</a></strong> Green-screen videa, vhs-styl, tv-glitch a camera-effect</li>
             </ul>
         </div>
     </section>
@@ -91,5 +105,22 @@
         <p>&copy; 2024 Minutka strachu. Všechna práva vyhrazena.</p>
     </div>
 </footer>
+<script>
+    const video = document.querySelector('#video video');
+    const iframe = document.querySelector('#video iframe');
+    const button = document.querySelector('#switch-button');
+
+    button.addEventListener('click', switchVideo);
+
+    function switchVideo() {
+        if (video.style.display === 'none') {
+            video.style.display = 'block';
+            iframe.style.display = 'none';
+        } else {
+            video.style.display = 'none';
+            iframe.style.display = 'block';
+        }
+    }
+</script>
 </body>
 </html>
