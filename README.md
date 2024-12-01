@@ -1,5 +1,4 @@
 # MINUTE OF FEAR (Minutka strachu)
-
-This is a short one-minute movie web presentation on the first semester of ZMT subject
+Web presentation about a Mini Film Project for ZMT Subject at ČVUT (SIT)
 
 [Pagelink here](https://neddy3z.github.io/Minute-of-fear/)
