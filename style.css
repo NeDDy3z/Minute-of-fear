@@ -110,7 +110,7 @@ section {
 }
 
 button {
-    display: block;
+    display: none;
     margin: 20px;
     padding: .5rem;
 
@@ -141,7 +141,7 @@ video, iframe {
     box-shadow: 0 0 15px var(--glow);
 }
 
-iframe {
+video {
     display: none;
 }
 
